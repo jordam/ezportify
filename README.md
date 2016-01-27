@@ -9,6 +9,8 @@ You may turn it off after the program has completed.
 
 Make sure you are on a stable internet connection, I have not coded in any fancy error handling yet.
 
-This script is based on pyportify by rckclmbr https://github.com/rckclmbr/pyportify
+This script is based on pyportify by rckclmbr https://github.com/rckclmbr/pyportify 
+
+pyportify is based on the original portify by mauimauer https://github.com/mauimauer/portify
 
 Runs on windows!
