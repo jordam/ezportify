@@ -9,7 +9,7 @@ You may turn it off after the program has completed.
 
 Make sure you are on a stable internet connection, I have not coded in any fancy error handling yet.
 
-*WINDOWS USERS* I have included ezportify.exe in win32.zip. If you are not comfortable with python you can download and extract win32.zip then run ezportify.exe to get going right away.
+**WINDOWS USERS** I have included ezportify.exe in win32.zip. If you are not comfortable with python you can download and extract win32.zip then run ezportify.exe to get going right away.
 
 This script is based on pyportify by rckclmbr https://github.com/rckclmbr/pyportify 
 
