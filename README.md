@@ -1,4 +1,4 @@
-This script is very basic right now, but it seems to work great. It will load up all playlists on your spotify account and it will recreate them on google play.
+This script is very basic right now, but it seems to work great. It will load up all playlists on your spotify account and recreate them in google play.
 
 By using ezportify you may violate both Spotify's and Google's Terms of Service. You agree that you are using ezportify on your own risk. The author does not accept liability (as far as permitted by law) for any loss arising from any use of this tool. If you choose not to agree to these terms, then you may not use this tool.
 
