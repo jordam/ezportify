@@ -85,7 +85,6 @@ def googlelogin():
 	return googleapi
 
 def main(args):
-
 	if not args.dump:
 		googleapi = googlelogin()
 	print "Enter Spotify OAUTH Token from https://developer.spotify.com/web-api/console/get-current-user-playlists/ "
@@ -150,6 +149,6 @@ if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description='Spotify To Google Playlist Transcription')
 	parser.add_argument("-d", "--dump", help="Only Dump Playlists To File",
 					action="store_true")
-	parser.add_argument('--version', action='version', version='%(prog)s 0.3')
+	parser.add_argument('--version', action='version', version='%(prog)s 0.4')
 	args = parser.parse_args()
 	main(args)
