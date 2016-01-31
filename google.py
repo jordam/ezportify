@@ -4,6 +4,7 @@ import urllib
 import urllib2
 import json
 import uuid
+import sys
 
 SJ_DOMAIN = "mclients.googleapis.com"
 SJ_URL = "/sj/v1.11"
@@ -25,7 +26,12 @@ class Mobileclient(object):
 
 	def login(self, username, password):
 		android_id = "asdkfjaj"
-		res = gpsoauth.perform_master_login(username, password, android_id)
+		try:
+			res = gpsoauth.perform_master_login(username, password, android_id)
+		except:
+			print "Developer might have forgotten to include cacert.pem. Please let him know!"
+			raw_input("Press enter to exit")
+			sys.exit()
 
 		if "Token" not in res:
 			return False
