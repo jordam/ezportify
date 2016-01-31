@@ -150,6 +150,6 @@ if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description='Spotify To Google Playlist Transcription')
 	parser.add_argument("-d", "--dump", help="Only Dump Playlists To File",
 					action="store_true")
-	parser.add_argument('--version', action='version', version='%(prog)s 0.2')
+	parser.add_argument('--version', action='version', version='%(prog)s 0.3')
 	args = parser.parse_args()
 	main(args)
