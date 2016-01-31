@@ -6,6 +6,7 @@ import urllib2
 import json
 import os
 import argparse
+import platform
 
 
 if ".exe" in sys.argv[0]:
@@ -29,6 +30,34 @@ try:
 except NameError:
 	pass
 
+def win_getpass(prompt='Password: ', stream=None):
+	"""Prompt for password with echo off, using Windows getch()."""
+	if sys.stdin is not sys.__stdin__:
+		return fallback_getpass(prompt, stream)
+	import msvcrt
+	for c in prompt:
+		msvcrt.putch(c)
+	pw = ""
+	while 1:
+		c = msvcrt.getwch()
+		if c == '\r' or c == '\n':
+			break
+		if c == '\003':
+			raise KeyboardInterrupt
+		if c == '\b':
+			if pw == '':
+				pass
+			else:
+				pw = pw[:-1]
+				msvcrt.putch('\b')
+				msvcrt.putch(" ")
+				msvcrt.putch('\b')
+		else:
+			pw = pw + c
+			msvcrt.putch("*")
+	msvcrt.putch('\r')
+	msvcrt.putch('\n')
+	return pw
 
 def hitapi(oauth, url):
 	headers = { 'Authorization' : 'Bearer ' +  oauth}
@@ -42,7 +71,10 @@ def hitapi(oauth, url):
 
 def googlelogin():
 	google_email = input("Enter Google email address: ")
-	google_pass = getpass("Enter Google password: ")
+	if platform.system() == "Windows":
+		google_pass = win_getpass("Enter Google password: ")
+	else:
+		google_pass = getpass("Enter Google password: ")
 
 	googleapi = Mobileclient()
 	google_loggedin = googleapi.login(google_email, google_pass)
@@ -117,7 +149,7 @@ def main(args):
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description='Spotify To Google Playlist Transcription')
 	parser.add_argument("-d", "--dump", help="Only Dump Playlists To File",
-                    action="store_true")
+					action="store_true")
 	parser.add_argument('--version', action='version', version='%(prog)s 0.2')
 	args = parser.parse_args()
 	main(args)
