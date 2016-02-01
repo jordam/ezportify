@@ -1,6 +1,6 @@
 # EZPortify
 
-Transfer all of your spotify playlists to google play.\
+Transfer all of your spotify playlists to google play.
 Also spits out all playlists and their tracks to a text file.
 
 ### Instructions
@@ -17,8 +17,8 @@ Run ezportify.py -h for help (ezportify.exe -h for windows users)
 I have included ezportify.exe in win32.zip. If you are not comfortable with python you can download and extract win32.zip then run ezportify.exe to get going right away. **[< WINDOWS DOWNLOAD >](https://github.com/jordam/ezportify/raw/master/win32.zip)**
 
 ### Props
-This script is based on pyportify by rckclmbr https://github.com/rckclmbr/pyportify \
-pyportify is based on the original portify by mauimauer https://github.com/mauimauer/portif
+This script is based on pyportify by rckclmbr https://github.com/rckclmbr/pyportify 
+pyportify is based on the original portify by mauimauer https://github.com/mauimauer/portify
 
 ### Disclaimer
 
