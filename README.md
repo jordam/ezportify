@@ -3,6 +3,10 @@
 Transfer all of your spotify playlists to google play.
 Also spits out all playlists and their tracks to a text file.
 
+### Preface
+
+Feel free to check out my new version that runs directly in your browser. No need to download anything or give anyone your password! --> **[Portify.JS](https://github.com/jordam/portify.js/)**
+
 ### Instructions
 
 
